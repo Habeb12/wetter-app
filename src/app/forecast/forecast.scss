@@ -1,0 +1,153 @@
+.card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f3f4f6, #e2e8f0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.circle-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #cbd5e0;
+}
+.table th {
+  background-color: #2b6cb0;
+  color: #ffffff;
+}
+.table td {
+  background-color: #edf2f7;
+}
+.table tr:hover {
+  background-color: #edf2f7;
+  transition: background-color 0.3s ease;
+}
+.icon {
+  font-size: 1.2rem;
+  color: #2b6cb0;
+}
+.forecast-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+  margin-bottom: 20px;
+}
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1a202c;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.blue-header {
+  background: linear-gradient(90deg, #2b6cb0, #3182ce);
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.description {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4a5568;
+  margin: 20px 0;
+  font-style: italic;
+}
+.current-values {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 120px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: slideIn 1s ease-in-out;
+}
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #cbd5e0, #a0aec0);
+}
+.box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+.box-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2b6cb0;
+}
+body {
+  background: url('/assets/icons/weather-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  animation: backgroundFade 5s infinite alternate;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes backgroundFade {
+  from {
+    filter: brightness(0.9);
+  }
+  to {
+    filter: brightness(1.1);
+  }
+}
+.diagram {
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.diagram:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

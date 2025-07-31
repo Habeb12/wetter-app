@@ -1,0 +1,82 @@
+<div class="container my-5">
+  <div class="blue-header text-center py-3 mb-4">
+    <h2>7-Tage Wettervorhersage</h2>
+  </div>
+
+  <div class="description text-center mb-4">
+    <p>Aktuelle Werte</p>
+  </div>
+
+  <!-- Lade Spinner -->
+  <div *ngIf="loading" class="text-center my-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Lade Daten...</span>
+    </div>
+  </div>
+
+  <!-- Aktuelle Wetter-Boxen -->
+  <div *ngIf="!loading" class="row justify-content-center mb-5 current-values">
+    <!-- Temperatur Box -->
+    <div class="col-md-4">
+      <div class="box shadow-sm text-center p-4">
+        <div class="box-title">Temperatur</div>
+        <div class="box-value">
+          <i [ngClass]="getWeatherIconFromCode(currentWeatherCode)" style="font-size: 2.5rem;"></i>
+          {{ weatherData?.current_weather.temperature }} °C
+        </div>
+      </div>
+    </div>
+
+    <!-- Windgeschwindigkeit Box -->
+    <div class="col-md-4">
+      <div class="box shadow-sm text-center p-4">
+        <div class="box-title">Windgeschwindigkeit</div>
+        <div class="box-value">
+          <i class="bi bi-wind text-info" style="font-size: 2.5rem;"></i>
+          {{ weatherData?.current_weather.windspeed }} km/h
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabelle -->
+  <div *ngIf="!loading" class="card shadow-sm mb-5">
+    <div class="card-body">
+      <h4 class="mb-3 text-center">Vorhersage-Tabelle</h4>
+      <table class="table table-bordered table-hover text-center">
+        <thead class="table-primary">
+          <tr>
+            <th>Datum</th>
+            <th>Wetter</th>
+            <th>Temperatur (°C)</th>
+            <th>Niederschlag (mm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of days">
+            <td><strong>{{ dates[i] }}</strong></td>
+            <td><i [ngClass]="getWeatherIconFromCode(weatherCodes[i])" style="font-size: 1.8rem;"></i></td>
+            <td [style.backgroundColor]="getTempColor(temperatures[i])">{{ temperatures[i] }}</td>
+            <td>{{ precipitation[i] }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Diagramm -->
+  <div *ngIf="!loading" class="card shadow-sm p-3">
+    <h4 class="text-center mb-3">Diagramm: Temperatur & Niederschlag</h4>
+    <ngx-charts-line-chart
+      [results]="chartData"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [xAxisLabel]="'Tag'"
+      [showYAxisLabel]="true"
+      [yAxisLabel]="'Wert'"
+      [autoScale]="true"
+      [tooltipDisabled]="false"
+      [showGridLines]="true">
+    </ngx-charts-line-chart>
+  </div>
+</div>
