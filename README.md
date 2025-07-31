@@ -9,8 +9,7 @@ Diese kleine Angular-App zeigt:
 ## Screenshots
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c48b3615-a0d3-4349-ac69-7ac851eb8383" width="48%">
-  <img src="https://github.com/user-attachments/assets/dae331a6-0904-46c6-aa59-232cb530f92d" width="48%">
+  <img src="https://github.com/user-attachments/assets/c48b3615-a0d3-4349-ac69-7ac851eb8383" width="48%">       <img src="https://github.com/user-attachments/assets/dae331a6-0904-46c6-aa59-232cb530f92d" width="48%">
 </p>
 
   
