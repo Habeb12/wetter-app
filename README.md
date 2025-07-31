@@ -5,7 +5,8 @@ Diese kleine Angular-App zeigt:
 - Eine 7-Tage-Vorhersage mit Temperatur und Niederschlag
 - Icons für Wetterlagen (Sonne, Regen, Wolken etc.)
 - Ein Diagramm für Temperatur & Niederschlag
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c349372-7746-4941-aa7f-31e2fc2332ad" />
+<img width="1097" height="798" alt="image" src="https://github.com/user-attachments/assets/c48b3615-a0d3-4349-ac69-7ac851eb8383" />        <img width="1070" height="345" alt="image" src="https://github.com/user-attachments/assets/dae331a6-0904-46c6-aa59-232cb530f92d" />
+  
 
 ## Installation & Start
 1. Repository klonen:  
@@ -23,5 +24,4 @@ Diese kleine Angular-App zeigt:
 - ngx-charts
 - Open-Meteo API
 
-## Hinweise
-Diese App wurde im Rahmen einer 2-Tage-Aufgabe entwickelt und ist als funktionaler Prototyp gedacht. Bei mehr Zeit würden noch zusätzliche Features wie erweiterte Fehlerbehandlung und responsives Design ergänzt.
+
