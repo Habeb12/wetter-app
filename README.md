@@ -5,6 +5,7 @@ Diese kleine Angular-App zeigt:
 - Eine 7-Tage-Vorhersage mit Temperatur und Niederschlag
 - Icons für Wetterlagen (Sonne, Regen, Wolken etc.)
 - Ein Diagramm für Temperatur & Niederschlag
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5c349372-7746-4941-aa7f-31e2fc2332ad" />
 
 ## Installation & Start
 1. Repository klonen:  
